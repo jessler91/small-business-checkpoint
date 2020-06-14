@@ -1,0 +1,19 @@
+{
+  "name": "small-business-checkpoint",
+  "version": "1.0.0",
+  "description": "chceckpoint#2 ACA 411",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessler91/small-business-checkpoint.git"
+  },
+  "author": "Justin Essler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessler91/small-business-checkpoint/issues"
+  },
+  "homepage": "https://github.com/jessler91/small-business-checkpoint#readme"
+}
