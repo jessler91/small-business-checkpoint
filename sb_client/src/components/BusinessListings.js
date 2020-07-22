@@ -28,20 +28,23 @@ const BusinessListings = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                {props.listings.map((listing, idx) => (
-                    <TableRow key={listing.id}>
-                        {/* <TableCell component="th" scope="row">{listing.id}</TableCell> */}
-                        <TableCell>{listing["businessName"]}</TableCell>
-                        <TableCell>{listing["description"]}</TableCell>
-                        <TableCell>{listing["hours"]}</TableCell>
-                        <TableCell>{listing["address"]}</TableCell>
-                        <TableCell>
-                            <DeleteIcon
-                                onClick={() => props.deleteListing(idx)}
-                                className="icon text-red" />
-                        </TableCell>
-                    </TableRow>
-                ))}
+                    {props.listings.map((listing, index) => {
+                        return (
+                            <TableRow key={listing.id}>
+                            <TableCell align="left">
+                                <Link to={`/details/${listing.id}`}>{listing.Name}</Link>
+                            </TableCell>
+                            <TableCell align="left">{listing.Description}</TableCell>
+                            <TableCell align="left">{listing.Hours}</TableCell>
+                            <TableCell align="left">{listing.Address}</TableCell>
+                            {document.cookie === "loggedIn=true" ? (
+                                <TableCell>
+                                <DeleteIcon onClick={() => props.removeListing(index)} />
+                                </TableCell>
+                            ) : null}
+                            </TableRow>
+                        );
+                    })}
                 </TableBody>
             </Table>
         </Container>

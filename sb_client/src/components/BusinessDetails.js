@@ -1,17 +1,17 @@
- 
-import React, { Component } from 'react'
-// import { Container, Divider, Switch } from '@material-ui/core'
+import React from "react";
+import { Container } from "@material-ui/core";
 
-class BusinessDetails extends Component {
+const BusinessDetails = (props) => {
+  const id = props.match.params.id;
+  const listings = props.listings.find((d) => d.id == id);
 
-
-    render() {
-        return (
-            <div className="text-gray">
-                Small Business App Details
-            </div>
-        )
-    }
-}
-
-export default BusinessDetails
+  return (
+    <Container maxWidth="sm">
+      <p>{listings.Name}</p>
+      <p>{listings.Address}</p>
+      <p>{listings.Hours}</p>
+      <p>{listings.Description}</p>
+    </Container>
+  );
+};
+export default BusinessDetails;
