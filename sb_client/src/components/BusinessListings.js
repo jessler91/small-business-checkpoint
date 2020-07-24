@@ -13,7 +13,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 const BusinessListings = (props) => {
     return (
         <Container maxWidth="lg" className="listings-container">
-            <h4>Welcome, {props.user.username}</h4>
+            <h4>Welcome Justin</h4>
             <div className="flex-container">
                 flex area
             </div>
@@ -32,7 +32,7 @@ const BusinessListings = (props) => {
                         return (
                             <TableRow key={listing.id}>
                             <TableCell align="left">
-                                <Link to={`/details/${listing.id}`}>{listing.Name}</Link>
+                                {/* <Link to={`/details/${listing.id}`}>{listing.Name}</Link> */}
                             </TableCell>
                             <TableCell align="left">{listing.Description}</TableCell>
                             <TableCell align="left">{listing.Hours}</TableCell>
