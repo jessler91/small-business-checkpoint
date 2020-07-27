@@ -9,7 +9,9 @@ import {
 } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 
- 
+
+
+
 const BusinessListings = (props) => {
     return (
         <Container maxWidth="lg" className="listings-container">
@@ -28,23 +30,27 @@ const BusinessListings = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.listings.map((listing, index) => {
+                    {console.log("props" + props)}
+                    
+                    {/* {props.listings.map((listing, id) => {
                         return (
+                            
+
                             <TableRow key={listing.id}>
                             <TableCell align="left">
-                                {/* <Link to={`/details/${listing.id}`}>{listing.Name}</Link> */}
+                                
                             </TableCell>
                             <TableCell align="left">{listing.Description}</TableCell>
                             <TableCell align="left">{listing.Hours}</TableCell>
                             <TableCell align="left">{listing.Address}</TableCell>
                             {document.cookie === "loggedIn=true" ? (
                                 <TableCell>
-                                <DeleteIcon onClick={() => props.removeListing(index)} />
+                                <DeleteIcon onClick={() => props.removeListing(id)} />
                                 </TableCell>
                             ) : null}
                             </TableRow>
                         );
-                    })}
+                    })} */}
                 </TableBody>
             </Table>
         </Container>
@@ -52,3 +58,9 @@ const BusinessListings = (props) => {
 }
 
 export default BusinessListings
+
+
+
+
+
+{/* <Link to={`/details/${listing.id}`}>{listing.Name}</Link> */}

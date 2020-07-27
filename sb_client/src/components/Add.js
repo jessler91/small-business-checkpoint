@@ -3,8 +3,6 @@ import { TextField,Button,Container } from '@material-ui/core'
 
 const Login = (props) => {
 
-
-
   const _onSubmit = (e) => {
     e.preventdefault();
     console.log('booom')
@@ -14,8 +12,6 @@ const Login = (props) => {
   const handleTextChange = () => {
     
   }
-
-  
 
     return (
       <div className="addtoMyListings">
