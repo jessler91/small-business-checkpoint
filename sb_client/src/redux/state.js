@@ -32,7 +32,7 @@ export default {
         },
         {
            "id": 3,
-           "businessName": "doc orthopedic care",
+           "businessName": "DOC orthopedic care",
            "description": 'urgent care orthopedic',
            "address": "2000 S IH-35, Ste N5, Round Rock, TX 78681",
            "hours": '8am - 5pm',
