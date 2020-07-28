@@ -36,7 +36,7 @@ const BusinessListings = (props) => {
                         return (
                             
 
-                            <TableRow key={listing.id}>
+                            <TableRow key={id}>
                             <TableCell align="left">
                                 
                             </TableCell>

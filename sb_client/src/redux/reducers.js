@@ -31,14 +31,13 @@ const user = (state = [], action) => {
 
 const listings = (state = [], action) => {
     switch(action.type) {
-        case 'ADD_LISTING':
-            let address = listing.address
-            let city = listing.city
-            let state = listing.state
-            return [ ...state, action.value ]
-
+    //     case 'ADD_LISTING':
+    //         let address = listing.address
+    //         let city = listing.city
+    //         return [ ...state, action.value ];
+    //     console.log(listings);
         default:
-            return state
+            return state;
     }
 }
 
@@ -49,7 +48,7 @@ const map = (state = [], action) => {
         case 'FETCH_COORDINATES':
             return [ ...state, action.value ]
         default:
-            return state
+            return state;
     }
 }
 
