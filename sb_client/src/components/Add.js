@@ -1,16 +1,24 @@
 import React from 'react'
 import { TextField,Button,Container } from '@material-ui/core'
 
-const Login = (props) => {
+const Add = (props) => {
 
-  const _onSubmit = (e) => {
-    e.preventdefault();
-    console.log('booom')
-    props.addListing()
+
+  const handleTextChange = (event) => {
+    setFormData({
+      ...formData, 
+      [event.target.name]: event.target.value
+    })
   }
 
-  const handleTextChange = () => {
-    
+  
+
+  const _onSubmit = (event) => {
+    event.preventDefault();
+    const newListing = this.state;
+    newListing.id = this.props.listings.length + 1;
+    this.props.addListing(newListing);
+    this.props.history.push('/listings');
   }
 
     return (
@@ -22,12 +30,14 @@ const Login = (props) => {
             <TextField
               required
               onChange={handleTextChange}
-              value={props.user.username}
+              value={formData.name || ''}
               placeholder='search address here'
               name="Search"
               label="address"
               type="text" 
             />
+
+            
 
             <TextField
               required
@@ -63,4 +73,4 @@ const Login = (props) => {
 
 }
 
-export default Login
+export default Add

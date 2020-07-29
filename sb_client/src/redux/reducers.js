@@ -6,17 +6,11 @@ import { combineReducers } from 'redux'
 const user = (state = [], action) => {
     switch(action.type) {
         case 'LOGIN':
-            // document.cookie = "loggedIn=true;max-age=60*1000"
-            // window.location.replace("/listings")
-            // console.log(cookies)
-            // return user
-            console.log('loggedin')
+            document.cookie = "loggedIn=true;max-age=60*1000"
+            window.location.replace("/listings")
+            console.log('loggedIn')
+            return user
 
-            // handleTextChange = (e) => {
-            //   const state = { ...this.state }
-            //   state[e.target.name] = e.target.value
-            //   this.setState(state)
-            // }
 
         case 'LOGOUT':
             // 
@@ -31,11 +25,12 @@ const user = (state = [], action) => {
 
 const listings = (state = [], action) => {
     switch(action.type) {
-    //     case 'ADD_LISTING':
-    //         let address = listing.address
-    //         let city = listing.city
-    //         return [ ...state, action.value ];
-    //     console.log(listings);
+        case 'ADD_LISTING':
+            return [ ...state, action.value ];
+        case 'REMOVE_BUSINESS':
+            const listings = [ ...state ];
+            listings.splice(action.value, 1);
+      return listings;
         default:
             return state;
     }
