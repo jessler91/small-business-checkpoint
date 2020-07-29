@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import BusinessListings from '../components/BusinessListings'
-import { removeBusiness } from '../redux/actions'
+import { deleteListing } from '../redux/actions'
 
 const mapStateToProps = (state) => {
     return {
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 // add mapDispatchToProps function here
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeBusiness: (index) => dispatch(removeBusiness(index))
+        deleteListing: (index) => dispatch(deleteListing(index))
     }
 }
 

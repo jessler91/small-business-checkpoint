@@ -8,7 +8,7 @@ import {
     TableRow
 } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -32,25 +32,25 @@ const BusinessListings = (props) => {
                 <TableBody>
                     {console.log("props" + props)}
                     
-                    {/* {props.listings.map((listing, id) => {
+                    {props.listings.map((listing, id) => {
                         return (
                             
 
                             <TableRow key={id}>
                             <TableCell align="left">
-                                
+                                <Link to={`/details/${listing.id}`}>{listing.businessName}</Link>
                             </TableCell>
-                            <TableCell align="left">{listing.Description}</TableCell>
-                            <TableCell align="left">{listing.Hours}</TableCell>
-                            <TableCell align="left">{listing.Address}</TableCell>
-                            {document.cookie === "loggedIn=true" ? (
-                                <TableCell>
-                                <DeleteIcon onClick={() => props.removeListing(id)} />
-                                </TableCell>
-                            ) : null}
+                            <TableCell align="left">{listing.description}</TableCell>
+                            <TableCell align="left">{listing.hours}</TableCell>
+                            <TableCell align="left">{listing.address}</TableCell>
+                                {document.cookie === "loggedIn=true" ? (
+                                    <TableCell>
+                                        <DeleteIcon onClick={() => props.removeListing(id)} />
+                                    </TableCell>
+                                ) : null}
                             </TableRow>
                         );
-                    })} */}
+                    })}
                 </TableBody>
             </Table>
         </Container>
@@ -63,4 +63,3 @@ export default BusinessListings
 
 
 
-{/* <Link to={`/details/${listing.id}`}>{listing.Name}</Link> */}
